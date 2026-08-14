@@ -11,7 +11,7 @@
 
 <div class="row g-4">
     <div class="col-md-4">
-        <img src="{{ $poster }}" loading="lazy" class="img-fluid rounded shadow-sm" alt="{{ $movie['Title'] }}">
+        <img src="{{ $poster }}" loading="lazy" class="img-fluid rounded shadow-sm" alt="{{ $movie['Title'] }}" onerror="this.onerror=null;this.src='https://placehold.co/400x593?text=No+Poster';">
     </div>
     <div class="col-md-8">
         <h2>{{ $movie['Title'] }} <small class="text-muted">({{ $movie['Year'] }})</small></h2>

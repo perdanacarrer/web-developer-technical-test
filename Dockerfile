@@ -18,7 +18,7 @@ RUN sed -ri -e "s!/var/www/html!${APACHE_DOCUMENT_ROOT}!g" /etc/apache2/sites-av
 WORKDIR /var/www/html
 
 COPY composer.json ./
-RUN composer install --no-interaction --no-scripts --no-autoloader --prefer-dist
+RUN composer install --no-interaction --no-scripts --no-autoloader --prefer-dist --no-security-blocking
 
 COPY . .
 RUN composer dump-autoload --optimize \

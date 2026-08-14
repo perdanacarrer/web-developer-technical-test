@@ -4,7 +4,7 @@
 <div class="col-6 col-md-4 col-lg-3 movie-col" data-imdb-id="{{ $movie['imdbID'] }}">
     <div class="card h-100 shadow-sm movie-card">
         <a href="{{ route('movies.show', $movie['imdbID']) }}">
-            <img src="{{ $poster }}" loading="lazy" class="card-img-top" alt="{{ $movie['Title'] }}" style="height:320px;object-fit:cover;">
+            <img src="{{ $poster }}" loading="lazy" class="card-img-top" alt="{{ $movie['Title'] }}" style="height:320px;object-fit:cover;" onerror="this.onerror=null;this.src='https://placehold.co/300x445?text=No+Poster';">
         </a>
         <div class="card-body d-flex flex-column">
             <h6 class="card-title mb-1">

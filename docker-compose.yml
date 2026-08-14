@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   app:
     build: .
@@ -15,8 +13,6 @@ services:
       # `docker compose down`. Comment this whole block out for a fully
       # ephemeral container.
       - db-data:/var/www/html/database
-    env_file:
-      - .env
 
 volumes:
   db-data:

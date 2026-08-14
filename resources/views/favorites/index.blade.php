@@ -10,7 +10,7 @@
         <div class="col-6 col-md-4 col-lg-3 movie-col" data-imdb-id="{{ $fav->imdb_id }}">
             <div class="card h-100 shadow-sm movie-card">
                 <a href="{{ route('movies.show', $fav->imdb_id) }}">
-                    <img src="{{ $fav->poster ?: 'https://placehold.co/300x445?text=No+Poster' }}" loading="lazy" class="card-img-top" alt="{{ $fav->title }}" style="height:320px;object-fit:cover;">
+                    <img src="{{ $fav->poster ?: 'https://placehold.co/300x445?text=No+Poster' }}" loading="lazy" class="card-img-top" alt="{{ $fav->title }}" style="height:320px;object-fit:cover;" onerror="this.onerror=null;this.src='https://placehold.co/300x445?text=No+Poster';">
                 </a>
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title mb-1">

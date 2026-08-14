@@ -37,7 +37,6 @@
                     </div>
                     <button type="submit" class="btn btn-primary w-100">{{ __('messages.login_button') }}</button>
                 </form>
-                <p class="text-muted small mt-3 mb-0 text-center">aldmic / 123abc123</p>
             </div>
         </div>
     </div>
