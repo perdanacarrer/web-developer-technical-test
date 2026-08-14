@@ -39,9 +39,9 @@
     @include('partials.empty-state', ['title' => __('messages.empty_search_title'), 'body' => __('messages.empty_search_body')])
 @endif
 
-<div id="infinite-scroll-sentinel" class="text-center text-muted py-4 d-none">
-    <div class="spinner-border spinner-border-sm me-2" role="status"></div>
-    <span id="scroll-status-text">{{ __('messages.loading_more') }}</span>
+<div id="infinite-scroll-sentinel" class="text-center text-muted py-4" style="{{ ($searched && count($results) > 0) ? '' : 'display:none;' }}">
+    <div id="scroll-spinner" class="spinner-border spinner-border-sm me-2 d-none" role="status"></div>
+    <span id="scroll-status-text"></span>
 </div>
 @endsection
 
@@ -54,13 +54,16 @@
         year: @json($year),
         page: 1,
         totalResults: @json($totalResults),
+        resultsInitialCount: @json(count($results)),
         loading: false,
         favoriteIds: @json($favoriteIds),
     };
 
     const grid = document.getElementById('movie-grid');
     const sentinel = document.getElementById('infinite-scroll-sentinel');
+    const spinner = document.getElementById('scroll-spinner');
     const statusText = document.getElementById('scroll-status-text');
+    let observer = null;
 
     function cardHtml(movie, isFavorite) {
         const poster = (movie.Poster && movie.Poster !== 'N/A') ? movie.Poster : 'https://placehold.co/300x445?text=No+Poster';
@@ -140,7 +143,7 @@
         if (state.page * 10 >= state.totalResults && state.page > 1) return;
 
         state.loading = true;
-        sentinel.classList.remove('d-none');
+        spinner.classList.remove('d-none');
         statusText.textContent = window.APP_LOCALE_STRINGS.loadingMore;
 
         const nextPage = state.page + 1;
@@ -159,18 +162,21 @@
             state.page = nextPage;
             state.totalResults = data.totalResults;
 
+            spinner.classList.add('d-none');
+
             if (!data.hasMore) {
                 statusText.textContent = window.APP_LOCALE_STRINGS.noMoreResults;
+                if (observer) observer.disconnect();
             } else {
-                sentinel.classList.add('d-none');
+                statusText.textContent = '';
             }
         } finally {
             state.loading = false;
         }
     }
 
-    if ('IntersectionObserver' in window && state.title) {
-        const observer = new IntersectionObserver(entries => {
+    if ('IntersectionObserver' in window && state.title && state.totalResults > state.resultsInitialCount) {
+        observer = new IntersectionObserver(entries => {
             if (entries[0].isIntersecting) loadMore();
         }, { rootMargin: '300px' });
         observer.observe(sentinel);
