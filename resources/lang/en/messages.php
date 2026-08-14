@@ -1,0 +1,58 @@
+<?php
+
+return [
+    'app_name' => 'Movie App',
+    'login' => 'Login',
+    'logout' => 'Logout',
+    'username' => 'Username',
+    'password' => 'Password',
+    'login_button' => 'Sign In',
+    'invalid_credentials' => 'Invalid username or password.',
+    'please_login' => 'Please log in to continue.',
+    'logged_out' => 'You have been logged out.',
+    'welcome' => 'Welcome',
+
+    'nav_movies' => 'Movies',
+    'nav_favorites' => 'Favorites',
+
+    'search_placeholder' => 'Search for a movie title...',
+    'search_button' => 'Search',
+    'filter_type' => 'Type',
+    'filter_all_types' => 'All types',
+    'filter_movie' => 'Movie',
+    'filter_series' => 'Series',
+    'filter_episode' => 'Episode',
+    'filter_year' => 'Year',
+    'filter_year_placeholder' => 'e.g. 2015',
+
+    'results_count' => ':count results found',
+    'loading_more' => 'Loading more movies...',
+    'no_more_results' => 'No more results.',
+
+    'empty_search_title' => 'Find your next favorite movie',
+    'empty_search_body' => 'Type a title above and press Search to get started.',
+    'empty_no_results_title' => 'No movies found',
+    'empty_no_results_body' => 'We could not find anything matching your search. Try a different title or filter.',
+    'empty_favorites_title' => 'No favorites yet',
+    'empty_favorites_body' => 'Movies you mark as favorite will show up here.',
+
+    'add_to_favorites' => 'Add to Favorites',
+    'remove_from_favorites' => 'Remove from Favorites',
+    'added_to_favorites' => 'Added to favorites.',
+    'removed_from_favorites' => 'Removed from favorites.',
+
+    'details' => 'Details',
+    'back_to_list' => 'Back to list',
+    'released' => 'Released',
+    'runtime' => 'Runtime',
+    'genre' => 'Genre',
+    'director' => 'Director',
+    'writer' => 'Writer',
+    'actors' => 'Actors',
+    'plot' => 'Plot',
+    'language' => 'Language',
+    'country' => 'Country',
+    'awards' => 'Awards',
+    'imdb_rating' => 'IMDb Rating',
+    'not_available' => 'N/A',
+];

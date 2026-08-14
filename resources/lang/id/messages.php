@@ -1,0 +1,58 @@
+<?php
+
+return [
+    'app_name' => 'Aplikasi Movie',
+    'login' => 'Masuk',
+    'logout' => 'Keluar',
+    'username' => 'Username',
+    'password' => 'Kata Sandi',
+    'login_button' => 'Masuk',
+    'invalid_credentials' => 'Username atau password salah.',
+    'please_login' => 'Silakan login terlebih dahulu.',
+    'logged_out' => 'Anda telah keluar.',
+    'welcome' => 'Selamat datang',
+
+    'nav_movies' => 'Daftar Movie',
+    'nav_favorites' => 'Favorit',
+
+    'search_placeholder' => 'Cari judul movie...',
+    'search_button' => 'Cari',
+    'filter_type' => 'Tipe',
+    'filter_all_types' => 'Semua tipe',
+    'filter_movie' => 'Movie',
+    'filter_series' => 'Series',
+    'filter_episode' => 'Episode',
+    'filter_year' => 'Tahun',
+    'filter_year_placeholder' => 'cth. 2015',
+
+    'results_count' => ':count hasil ditemukan',
+    'loading_more' => 'Memuat movie lainnya...',
+    'no_more_results' => 'Tidak ada hasil lagi.',
+
+    'empty_search_title' => 'Temukan movie favoritmu',
+    'empty_search_body' => 'Ketik judul di atas lalu tekan Cari untuk memulai.',
+    'empty_no_results_title' => 'Movie tidak ditemukan',
+    'empty_no_results_body' => 'Kami tidak menemukan hasil yang sesuai. Coba judul atau filter lain.',
+    'empty_favorites_title' => 'Belum ada favorit',
+    'empty_favorites_body' => 'Movie yang kamu tandai sebagai favorit akan muncul di sini.',
+
+    'add_to_favorites' => 'Tambah ke Favorit',
+    'remove_from_favorites' => 'Hapus dari Favorit',
+    'added_to_favorites' => 'Berhasil ditambahkan ke favorit.',
+    'removed_from_favorites' => 'Berhasil dihapus dari favorit.',
+
+    'details' => 'Detail',
+    'back_to_list' => 'Kembali ke daftar',
+    'released' => 'Rilis',
+    'runtime' => 'Durasi',
+    'genre' => 'Genre',
+    'director' => 'Sutradara',
+    'writer' => 'Penulis',
+    'actors' => 'Pemeran',
+    'plot' => 'Sinopsis',
+    'language' => 'Bahasa',
+    'country' => 'Negara',
+    'awards' => 'Penghargaan',
+    'imdb_rating' => 'Rating IMDb',
+    'not_available' => 'N/A',
+];

@@ -1,0 +1,15 @@
+body {
+    background-color: #f7f7fb;
+}
+
+.movie-card {
+    transition: transform .15s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
